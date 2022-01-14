@@ -31,7 +31,37 @@
 								out.println(today());
 							 }else{
 								 out.println(new java.util.Date());
-						   }%></h1>
+						   }%>
+	</h1>
+						   
+						   
+						   
+						   
+						   
+						   
+						   
+						   
+	<!-- EXERCICIO 2 -->
+		<!-- DECLARATION -->
+			<%!int contador = 10; %>
+			<%!String menor = "menor"; %>
+			<%!String maior = "maior"; %>
+		<!-- END DECLARATION -->
+		
+	
+		
+		<!-- SCRIPLET -->
+				<%if(contador<100){
+					out.println(maior);
+				} else {
+					out.println(menor);
+				}%>
+		<!-- END SCRIPLET -->
+		
+		<!-- EXPRESSION -->
+			<h1><%=contador%></h1>
+		<!-- END EXPRESSION -->
+		
 
 </body>
 </html>
