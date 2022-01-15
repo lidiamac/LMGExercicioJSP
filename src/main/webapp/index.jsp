@@ -1,4 +1,5 @@
 <%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -62,6 +63,32 @@
 			<h1><%=contador%></h1>
 		<!-- END EXPRESSION -->
 		
+
+
+<!-- EXERCICIO 3 -->
+		<!-- DECLARATION -->
+		<%! Calendar cal = Calendar.getInstance();%>
+		<%!int segundos(){
+			return cal.get(Calendar.SECOND);
+		}%>
+		<%!String par = "par";%>
+		<%!String impar = "impar";%>
+		<!-- END DECLARATION -->
+		
+		<!-- SCRIPLET -->
+			<%if(segundos() % 2 == 0){
+				out.println(par);
+				}else{
+					out.println(segundos());
+				}%>
+		<!-- END SCRIPLET -->
+		
+		<!-- EXPRESSION -->
+			<h1>São <%=segundos()%> segundos</h1>
+		<!-- END EXPRESSION -->
+
+
+	
 
 </body>
 </html>
